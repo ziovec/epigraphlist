@@ -87,7 +87,7 @@ class Ui_MainWindow(object):
         for carattere in sorted(risultato4):
             listaEpigrafe = ("[cm   4] {0}:  {1}".format(carattere, risultato4[carattere]))
             self.textBrowser.append(listaEpigrafe)
-        info4 = len(scritta4) - len(punt4)
+        info4 = len(scritta4) - len(punt4) - scritta4.count(" ")
         if info4 != 0:
             self.textBrowser.append("__________________________")
             self.textBrowser.append("TOTALE CM 4:          " + str(info4) + "pz.")
@@ -96,7 +96,7 @@ class Ui_MainWindow(object):
         for carattere in sorted(risultato3):
             listaEpigrafe = ("[cm   3] {0}:  {1}".format(carattere, risultato3[carattere]))
             self.textBrowser.append(listaEpigrafe)
-        info3 = len(scritta3) - len(punt3)
+        info3 = len(scritta3) - len(punt3) - scritta3.count(" ")
         if info3 != 0:
             self.textBrowser.append("__________________________")
             self.textBrowser.append("TOTALE CM 3:          " + str(info3) + "pz.")
@@ -105,7 +105,7 @@ class Ui_MainWindow(object):
         for carattere in sorted(risultato25):
             listaEpigrafe = ("[cm 2,5] {0}:  {1}".format(carattere, risultato25[carattere]))
             self.textBrowser.append(listaEpigrafe)
-        info25 = len(scritta25) - len(punt25)
+        info25 = len(scritta25) - len(punt25) - scritta25.count(" ")
         if info25 != 0:
             self.textBrowser.append("__________________________")
             self.textBrowser.append("TOTALE CM 2,5:        " + str(info25) + "pz.")
@@ -114,7 +114,7 @@ class Ui_MainWindow(object):
         for carattere in sorted(risultato2):
             listaEpigrafe = ("[cm   2] {0}:  {1}".format(carattere, risultato2[carattere]))
             self.textBrowser.append(listaEpigrafe)
-        info2 = len(scritta2) - len(punt2)
+        info2 = len(scritta2) - len(punt2) - scritta2.count(" ")
         if info2 != 0:
             self.textBrowser.append("__________________________")
             self.textBrowser.append("TOTALE CM 2:          " + str(info2) + "pz.")
