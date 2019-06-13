@@ -86,7 +86,7 @@ class Ui_MainWindow(object):
         for character in sorted(epigraph4cm):
             epigraphList = ("[cm   4] {0}:  {1}".format(character, epigraph4cm[character]))
             self.textBrowser.append(epigraphList)
-        info4 = len(text4cm) - len(punct4)
+        info4 = len(text4cm) - len(punct4) - text4cm.count(" ")
         if info4 != 0:
             self.textBrowser.append("__________________________")
             self.textBrowser.append("TOTAL CM 4:          " + str(info4) + "pz.")
@@ -95,7 +95,7 @@ class Ui_MainWindow(object):
         for character in sorted(epigraph3cm):
             epigraphList = ("[cm   3] {0}:  {1}".format(character, epigraph3cm[character]))
             self.textBrowser.append(epigraphList)
-        info3 = len(text3cm) - len(punct3)
+        info3 = len(text3cm) - len(punct3) - text4cm.count(" ")
         if info3 != 0:
             self.textBrowser.append("__________________________")
             self.textBrowser.append("TOTAL CM 3:          " + str(info3) + "pz.")
@@ -104,7 +104,7 @@ class Ui_MainWindow(object):
         for character in sorted(epigraph25cm):
             epigraphList = ("[cm 2,5] {0}:  {1}".format(character, epigraph25cm[character]))
             self.textBrowser.append(epigraphList)
-        info25 = len(text25cm) - len(punct25)
+        info25 = len(text25cm) - len(punct25) - text4cm.count(" ")
         if info25 != 0:
             self.textBrowser.append("__________________________")
             self.textBrowser.append("TOTAL CM 2,5:        " + str(info25) + "pz.")
@@ -113,7 +113,7 @@ class Ui_MainWindow(object):
         for character in sorted(epigraph2cm):
             epigraphList = ("[cm   2] {0}:  {1}".format(character, epigraph2cm[character]))
             self.textBrowser.append(epigraphList)
-        info2 = len(text2cm) - len(punct2)
+        info2 = len(text2cm) - len(punct2) - text4cm.count(" ")
         if info2 != 0:
             self.textBrowser.append("__________________________")
             self.textBrowser.append("TOTAL CM 2:          " + str(info2) + "pz.")
