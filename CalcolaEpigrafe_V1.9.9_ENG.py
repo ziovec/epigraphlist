@@ -12,7 +12,8 @@ def countPunct(n): # Function needed to underline punctuaction symbol ONLY, with
     n = re.sub(r'[^.,\'\"\-]', "", n)
     return n
 
-def epigraph(word): # Create dictionary for numbers and letters
+def epigraph(word): # Create dictionary for numbers and letters, combining 6
+                    # and 9 because they are the same physical character
     word = word.replace("'", ",")
     word = re.sub(r'[^A-Za-z0-9]+', "", word).replace("9", "6").upper()
     return dict([(character, word.count(character)) for character in word])
